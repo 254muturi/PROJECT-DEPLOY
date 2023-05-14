@@ -1,6 +1,12 @@
+from flask import Flask
 
-def print_hi(name):
-    print(f'Hi, {name}')
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello_world():
+    return "HELLO WORLD"
+
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    app.run()
